@@ -18,7 +18,7 @@ def divide():
   n1 = input('Enter a number: ')
   n2 = input('Enter another number: ')
   time.sleep(1)
-  print(int(n1)int(n2))
+  print(int(n1)/int(n2))
   
 def subtract():
   n1 = input('Enter a number: ')
@@ -28,18 +28,26 @@ def subtract():
   
 run = True
 while run:
-  ans = input('Select an opreation: ')
-  if(ans=='Addition'):
+  ans = input('''Select an opreation:
+  1.Addition
+  2.Divide
+  3.Multiply
+  4.Subtraction
+  ''')
+  if(ans=='Addition' or ans=='1'):
     add()
     
-  if(ans=='Divide'):
+  elif(ans=='Divide' or ans=='2'):
     divide()
     
-  if(ans=='Multiply'):
+  elif(ans=='Multiply' or ans=='3'):
     multiply()
     
-  if(ans=='Subtract'):
+  elif(ans=='Subtract' or ans == '4'):
     subtract()
+  else:
+    print("Enter a valid operation.\n")
+
   
   
   
